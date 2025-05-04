@@ -53,6 +53,7 @@ You're not using digitalWrite(). You're writing directly to registers.
 
 ***Example from STM32: \
  \
+```
 USART_CR1 (Control Register 1) \
 Bit 13 - UE: USART enable \
 Bit 3  - TE: Transmitter enable \
@@ -61,7 +62,7 @@ Bit 2  - RE: Receiver enable***
 ***To enable TX & RX: \
  \
 USART1->CR1 |= (1 << 3) | (1 << 2);***
-
+```
 # Toolchain Overview
 
 ## Compilers
@@ -73,7 +74,7 @@ USART1->CR1 |= (1 << 3) | (1 << 2);***
 - [ ] Keil (commercial)
 
 ## Linkers, Startup Files, Vector Tables
-
+```
 ***ENTRY(Reset_Handler) \
  \
 SECTIONS { \
@@ -83,7 +84,7 @@ SECTIONS { \
     *(.rodata*) \
   } \
 }***
-
+```
 ## Flashing Tools & Debuggers
 
 - ST-Link
